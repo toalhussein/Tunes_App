@@ -12,8 +12,16 @@ class TunesItem extends StatelessWidget {
         onTap:(){
           item.playSound();
         } ,
-        child: Container(
-          color: item.color,
+        child: Padding(
+          padding: const EdgeInsets.all(7.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: item.color,
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+              border: Border.all(color: item.color),
+            ),
+            // color: item.color,
+          ),
         ),
       ),
     );
